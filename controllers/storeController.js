@@ -86,3 +86,31 @@ exports.getHomeDetails = (req, res, next) => {
     }
   });
 };
+
+
+
+//footer section 
+exports.getContact = (req, res, next) => {
+  res.render("footer/contact", {
+    pageTitle: "Contact Us",
+    currentPage: "contact",
+    isLoggedIn: req.isLoggedIn, 
+    user: req.session.user,
+  });
+};
+exports.getTermsOfService = (req, res, next) => {
+  res.render("footer/terms-of-service", {
+    pageTitle: "Terms of Service",
+    currentPage: "terms-of-service",
+    isLoggedIn: req.isLoggedIn, 
+    user: req.session.user,
+  });
+};
+exports.getPrivacyPolicy = (req, res, next) => {
+  res.render("footer/privacy-policy", {
+    pageTitle: "Privacy Policy",
+    currentPage: "privacy-policy",
+    isLoggedIn: req.isLoggedIn, 
+    user: req.session.user,
+  });
+};
