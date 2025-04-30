@@ -23,7 +23,7 @@ exports.getSignup = (req, res, next) => {
     user: {},
   });
 };
-
+  
 exports.postSignup = [
   check("firstName")
   .trim()
